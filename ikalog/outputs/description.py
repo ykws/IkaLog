@@ -228,6 +228,10 @@ class Description(object):
             # kd
             result_list.append('%2dk%2dd' % (player['kills'], player['deaths']))
 
+            # kd
+            if 'my_kills' in player:
+                result_list.append('(my_kill %2dk)' % (player['my_kills']))
+
             # weapon
             result_list.append(IkaUtils.death_reason2text(player['weapon']))
 
